@@ -140,10 +140,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -3593339893138515035, guid: 35bc697ebc88141a895195db2e1cfc3f, type: 2}
-  - {fileID: 11400000, guid: 4cdf83d997881481fa4972dfc0a6b054, type: 2}
-  - {fileID: 11400000, guid: a4c1a3b3ea7bf4691818763a304ff3e4, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -772,6 +769,6 @@ PlayerSettings:
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
-  platformRequiresReadableAssets: 1
+  platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
   insecureHttpOption: 0
