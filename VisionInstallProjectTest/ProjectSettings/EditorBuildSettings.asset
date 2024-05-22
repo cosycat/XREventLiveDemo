@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scene1_Cube.unity
+    guid: 170a75eaf83c340d6a272bb920c78d98
+  - enabled: 1
+    path: Assets/Scenes/Scene2_MovableCube.unity
+    guid: 2ca478e2a7f5b4cc5b63b6495a2ac6c4
+  - enabled: 1
+    path: Assets/Scenes/Scene3_Unbounded.unity
+    guid: a0f3eceaab3e5411eb04ea2a36863a87
+  - enabled: 1
+    path: Assets/Scenes/Scene4_Visuals.unity
+    guid: ca549a1cf7c2b43d1a83deb8d8a4b4e5
   m_configObjects:
     UnityEditor.XR.VisionOS.VisionOSSettings: {fileID: 11400000, guid: 5557bab329e784e4ab8f313bc8ffc280, type: 2}
     com.unity.polyspatial.xr.xr_settings: {fileID: 11400000, guid: c8ec6f79af92841178aa6864c1dd9620, type: 2}

@@ -5,6 +5,9 @@ using UnityEngine.InputSystem.LowLevel;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
+/// <summary>
+/// Rotates the object when touched around the defined axes.
+/// </summary>
 public class VisionTouchReceiverRotator : VisionTouchReceiver {
     
     [SerializeField] private bool3 allowRotation = new(true, true, true);
@@ -13,16 +16,17 @@ public class VisionTouchReceiverRotator : VisionTouchReceiver {
     private Vector3 _prevTouchRotation;
 
     public override void OnTouch(Touch touch, SpatialPointerState spatialPointerState) {
-        if (spatialPointerState.Kind != SpatialPointerKind.DirectPinch && spatialPointerState.Kind != SpatialPointerKind.IndirectPinch)
-            return;
         
         switch (touch.phase) {
+            
             case TouchPhase.Began:
                 OnTouchBegan(touch, spatialPointerState);
                 break;
+            
             case TouchPhase.Moved:
                 OnTouchMoved(touch, spatialPointerState);
                 break;
+            
         }
     }
 
@@ -33,7 +37,6 @@ public class VisionTouchReceiverRotator : VisionTouchReceiver {
 
     public void OnTouchMoved(Touch touch, SpatialPointerState spatialPointerState) {
         var deviceRotation = spatialPointerState.inputDeviceRotation.eulerAngles;
-        // var deltaRotation = deviceRotation - _initialTouchRotation;
         
         var rotationToApply = Vector3.zero;
         if (allowRotation.x) rotationToApply.x = deviceRotation.x - _prevTouchRotation.x;
